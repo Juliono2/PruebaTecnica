@@ -12,7 +12,7 @@ export class GameCardComponent {
 
   constructor(private router: Router){}
 
-  seeMore(){
+  seeMore(){  // Para desplegar pagina de detalle del juego
     this.router.navigate(['/game/', this.game.gameID]);
   }
 }

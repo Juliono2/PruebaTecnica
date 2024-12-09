@@ -11,7 +11,8 @@ export class SearchComponent {
   @Input() disabled: boolean = false;
   @Output() search = new EventEmitter<string>();
   searchQuery: string = ''; 
-  
+
+  //Emite el llamado del metodo
   onSearchChange(): void {
     this.search.emit(this.searchQuery);
   }

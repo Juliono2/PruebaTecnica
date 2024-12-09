@@ -1,3 +1,4 @@
+// Interface juegos
 export interface Game {
     gameID: number,
     steamAppID: number | null,

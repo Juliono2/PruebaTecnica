@@ -11,11 +11,13 @@ export class NavBarComponent {
   @Input() isSearchDisabled: boolean = false;
   @Output() searchEvent = new EventEmitter<string>();
 
+  //Emite el llamado del metodo
   emitSearch(searchValue: string): void {
     this.searchEvent.emit(searchValue);
   }
 
-  viewSummary() {
+  //Metodos de escucha
+  viewSummary() { 
     console.log('Mostrando resumen de compras...');
   }
 

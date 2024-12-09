@@ -15,10 +15,12 @@ export class ApiServiceService {
   
   constructor( private httpClient: HttpClient) { }
 
+  //Metodo que trae todos los juegos por titulo y un limite de 10
   getGames(fetchGame: string): Observable<Game[]> {
     return this.httpClient.get<Game[]>(this.baseUrl + `games?title=${fetchGame}&limit=10`);
   }
 
+  //Metodo que trea un juego
   getGame(idGame: number): Observable<GameInfo> {
     return this.httpClient.get<GameInfo>(this.baseUrl + `games?id=${idGame}`)
   }

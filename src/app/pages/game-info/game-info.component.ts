@@ -22,12 +22,14 @@ export class GameInfoComponent {
     this.getGame(); 
   }
 
+  //Traer el juego seleccionado
   getGame() {
     this.service.getGame(this.idGame).subscribe(data => {
       this.game = data;
     })
   }
 
+  // Volver al home
   return(){
     this.router.navigate(['/']);
   }

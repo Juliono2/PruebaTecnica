@@ -1,5 +1,6 @@
-import { Deals } from "./deals"
+// Interface para detalle de juego
 
+import { Deals } from "./deals"
 
 export interface GameInfo {
     info: {

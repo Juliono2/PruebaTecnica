@@ -1,3 +1,4 @@
+// Interface para ofertas
 export interface Deals {
     storeID: number,
     dealID: string,

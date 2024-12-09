@@ -27,8 +27,7 @@
     width: 250px;
     height: 20px;
 
-
-    &::before {
+    &::before {     // Ajuste por el uso de transform
         content: '';
         position: absolute;
         top: -88px;
@@ -39,7 +38,7 @@
         z-index: 1;
     }
 
-    &:hover {
+    &:hover {       //Hover cambio de brand y before
         background-color: $brand-hover-background;
         &::before {
             background-color: $brand-hover-background; 

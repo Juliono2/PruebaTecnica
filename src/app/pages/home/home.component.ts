@@ -24,6 +24,7 @@ export class HomeComponent {
     })
   }
 
+  //Realiza la busqueda
   search(fetchGame: string){
     this.getGames(fetchGame);
   }
