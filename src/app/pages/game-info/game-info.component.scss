@@ -1,0 +1,101 @@
+@use '../../styles/functions' as functions;
+@import '../../styles/colors';
+
+.game_page {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh; 
+    background-color: $navbar-background;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.back-button {
+    @include functions.generalButton($background-color: #ff5722,
+            $text-color: #fff,
+            $hover-bg-color: #fdc62e,
+            $hover-txt-color: #f5f5f5);
+}
+
+.game {
+    max-width: 1200px;
+    width: 100%;
+    color: $text-color; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; 
+}
+
+.game_layout {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center; 
+    align-items: flex-start; 
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.game_info {
+    flex: 1;
+    text-align: center;
+    background-color: $navbar-background;
+    color: $text-color;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        margin: 10px 0;
+    }
+
+    h4 {
+        color: lighten($text-color, 20%);
+    }
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: black; 
+    border-bottom: 3px solid $brand-background;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.game_deals {
+    padding-top: 2px;
+    flex: 2;
+    width: 100%;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th, td {
+            border: 1px solid lighten(black, 60%);
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: $brand-background; 
+            color: $brand-text-color; 
+        };
+
+        td {
+            background-color: lighten($navbar-background, 30%);
+        }
+    }
+}

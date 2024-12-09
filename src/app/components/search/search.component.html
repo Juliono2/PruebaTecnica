@@ -1,0 +1,12 @@
+<div class="search-bar">
+    <button (click)="onSearchChange()">
+        <i class="fa-solid fa-magnifying-glass" style="color: #db3833"></i>
+    </button>
+    <input 
+        type="text" 
+        placeholder="¿Que estas buscando?" 
+        [(ngModel)]="searchQuery"
+        [disabled]="disabled" 
+        (input)="onSearchChange()"
+    />
+</div>

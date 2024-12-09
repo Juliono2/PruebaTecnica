@@ -1,0 +1,9 @@
+<div class="game-card">
+    <img [src]="game.thumb" [alt]="game.title" class="game-image" />
+    <h3 class="game-title">{{ game.external }}</h3>
+    <button 
+        class="game-card-button" 
+        (click)="seeMore()"> 
+        Ver detalles 
+    </button>
+</div>

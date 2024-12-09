@@ -1,0 +1,38 @@
+@use './colors';
+
+@mixin app-button($background-color,
+    $text-color,
+    $hover-bg-color,
+    $hover-txt-color) {
+    background-color: $background-color;
+    color: $text-color;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: $hover-bg-color;
+        color: $hover-txt-color;
+    }
+}
+
+@mixin generalButton($background-color, $text-color, $hover-bg-color, $hover-txt-color) {
+    background-color: $background-color;
+    color: $text-color;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: $hover-bg-color;
+        color: $hover-txt-color;
+    }
+}

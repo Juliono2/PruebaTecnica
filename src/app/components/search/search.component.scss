@@ -1,0 +1,49 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: auto;
+    outline: none; 
+    transition: border-color 0.3s; 
+}
+
+input:focus {
+    border-color: red; 
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    background-color: white;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e4b1af;
+}
+
+@media screen and (max-width: 600px) {
+    .search-bar {
+        align-items: stretch;
+    }
+
+    input {
+        width: 100%; 
+        margin-bottom: 8px; 
+    }
+
+    button {
+        width: 100%;
+    }
+}

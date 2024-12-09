@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import './app/styles/colors';
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $navbar-background;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: grey;
+    width: 50%;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: darkgrey;
+    width: 2px; 
+}

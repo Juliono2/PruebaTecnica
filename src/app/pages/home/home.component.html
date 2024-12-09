@@ -1,0 +1,11 @@
+<app-nav-bar (searchEvent)="search($event)"></app-nav-bar>
+<div class="home">
+    <div *ngIf="games" class="list_games">
+        <div class="game" *ngFor="let game of games">
+            <app-game-card [game]="game"></app-game-card>
+        </div>
+    </div>
+    <div *ngIf="games?.length==0" class="no-games-message">
+        <h1> Debes realizar una búsqueda </h1>
+    </div>
+</div>

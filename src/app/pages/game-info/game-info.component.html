@@ -1,0 +1,43 @@
+<app-nav-bar [isSearchDisabled]="true" ></app-nav-bar>
+<div class="game_page">
+    <div class="game">
+        <div class="game_layout">
+            <!-- Información del juego -->
+            <div class="game_info">
+                <h3>Información del Juego</h3>
+                <img src={{game?.info?.thumb}} alt="Game Thumbnail">
+                <h2>{{game?.info?.title}}</h2>
+                <h4>Precio más bajo: {{game?.cheapestPriceEver?.price}}</h4>
+            </div>
+
+            <div class="game_deals">
+                <h3>Ofertas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Store ID</th>
+                            <th>Deal ID</th>
+                            <th>Precio</th>
+                            <th>Precio minorista</th>
+                            <th>Ahorros</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let deals of game?.deals">
+                            <td>{{ deals?.storeID }}</td>
+                            <td>{{ deals?.dealID }}</td>
+                            <td>{{ deals?.price | currency:'USD':'symbol' }}</td>
+                            <td>{{ deals?.retailPrice | currency:'USD':'symbol' }}</td>
+                            <td>{{ deals?.savings | percent:'1.2-2' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button 
+                    class="back-button" 
+                    (click)="return()">
+                    Volver
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
